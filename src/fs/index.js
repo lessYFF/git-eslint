@@ -5,7 +5,7 @@ var path = require('path')
 var FS = {
     // 同步读取文件封装
     readFileSync(arg) {
-        return fs.readFileSync(path.resolve(arg), function(err) {
+        return fs.readFileSync(path.resolve(__dirname, arg), function(err) {
             if (err) {
                 console.error(err)
                 return

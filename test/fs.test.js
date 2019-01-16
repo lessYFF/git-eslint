@@ -10,7 +10,7 @@ var copyFile = function(src, dist) {
 describe('.commitlintrc.js是否创建', () => {
     it('.commitlintrc.js是否创建', () => {
         // 拷贝配置文件到项目根目录
-        copyFile('.commitlintrc.js', 'dist/.commitlintrc.js')
+        copyFile('../../.commitlintrc.js', 'dist/.commitlintrc.js')
         var isExist = FS.isFileExist('dist/.commitlintrc.js')
         expect(isExist).to.be.true
     })
