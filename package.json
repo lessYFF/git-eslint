@@ -1,7 +1,7 @@
 {
-    "name": "git-lints",
+    "name": "git-eslint",
     "version": "1.0.8",
-    "author": "Bruce yff",
+    "author": "Bruce yan",
     "license": "MIT",
     "description": "git pre-commit for verifying commit-msg and eslint, then prettier",
     "main": "index.js",
@@ -50,7 +50,7 @@
     },
     "config": {
         "commitizen": {
-            "path": "./node_modules/cz-conventional-changelog"
+            "path": "cz-conventional-changelog"
         }
     }
 }

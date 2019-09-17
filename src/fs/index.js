@@ -7,8 +7,7 @@ var FS = {
     readFileSync(arg) {
         return fs.readFileSync(path.resolve(__dirname, arg), function(err) {
             if (err) {
-                console.error(err)
-                return
+                return console.error(err)
             }
         })
     },
@@ -19,14 +18,25 @@ var FS = {
 
         fs.writeFileSync(path.resolve(arg[0]), arg[1], 'utf8', function(err) {
             if (err) {
-                console.error(err)
-                return
+                return console.error(err)
             }
         })
     },
     // 检查文件是否存在
     isFileExist(arg) {
         return fs.existsSync(path.resolve(arg))
+    },
+    // 拷贝文件到指定目录
+    copyFile(src, dist) {
+        this.writeFileSync(dist, this.readFileSync(src))
+    },
+    // 批量拷贝文件到指定目录
+    batchCopyFile(args, prefix = '') {
+        if (!Array.isArray(args)) return new Error('the arguments should be Array')
+
+        args.forEach(item => {
+            this.copyFile(path.resolve(item), prefix + item)
+        })
     },
 }
 
