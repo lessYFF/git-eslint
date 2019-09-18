@@ -1,16 +1,16 @@
 {
     "name": "git-eslint",
-    "version": "1.0.8",
+    "version": "1.0.9",
     "author": "Bruce yan",
     "license": "MIT",
-    "description": "git pre-commit for verifying commit-msg and eslint, then prettier",
+    "description": "git pre-commit for verifying commit-msg 、eslint and prettier",
     "main": "index.js",
     "scripts": {
         "start": "node src/index",
         "test": "mocha test/fs.test"
     },
     "bin": {
-        "git-lints-init": "./src/index.js"
+        "git-eslint-init": "./src/index.js"
     },
     "keywords": [
         "pre-commit",
