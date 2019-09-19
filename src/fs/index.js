@@ -31,11 +31,11 @@ var FS = {
         this.writeFileSync(dist, this.readFileSync(src))
     },
     // 批量拷贝文件到指定目录
-    batchCopyFile(args, prefix = '') {
+    batchCopyFile(args, srcPrefix = '', distPrefix = '') {
         if (!Array.isArray(args)) return new Error('the arguments should be Array')
 
         args.forEach(item => {
-            this.copyFile(path.resolve(item), prefix + item)
+            this.copyFile(srcPrefix + item, distPrefix + item)
         })
     },
 }

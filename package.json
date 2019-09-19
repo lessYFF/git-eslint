@@ -1,9 +1,9 @@
 {
     "name": "git-eslint",
-    "version": "1.0.9",
+    "version": "1.1.0",
     "author": "Bruce yan",
     "license": "MIT",
-    "description": "git pre-commit for verifying commit-msg 、eslint and prettier",
+    "description": "git pre-commit for verifying commit-msg , eslint code and prettier",
     "main": "index.js",
     "scripts": {
         "start": "node src/index",

@@ -5,7 +5,7 @@ var path = require('path')
 var FS = require('./fs/index')
 
 // 拷贝配置文件到项目根目录
-FS.batchCopyFile(['CHANGELOG.md', '.eslintrc.js', '.prettierrc.js', '.commitlintrc.js'])
+FS.batchCopyFile(['CHANGELOG.md', '.eslintrc.js', '.prettierrc.js', '.commitlintrc.js'], '../../')
 // 将配置写入到根目录package.json
 var packageJSON = require(path.resolve('package.json'))
 Object.assign(packageJSON, {
