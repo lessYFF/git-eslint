@@ -1,26 +1,17 @@
-'use strict'
-var fs = require('fs')
-var path = require('path')
+import * as fs from 'fs'
+import * as path from 'path'
 
-var FS = {
+const FS = {
     // 同步读取文件封装
     readFileSync(arg) {
-        return fs.readFileSync(path.resolve(__dirname, arg), function(err) {
-            if (err) {
-                return console.error(err)
-            }
-        })
+        return fs.readFileSync(path.resolve(__dirname, arg))
     },
     // 同步写入文件封装
     writeFileSync(...arg) {
         // 已存在则不写入
         if (this.isFileExist(arg[0])) return
 
-        fs.writeFileSync(path.resolve(arg[0]), arg[1], 'utf8', function(err) {
-            if (err) {
-                return console.error(err)
-            }
-        })
+        fs.writeFileSync(path.resolve(arg[0]), arg[1])
     },
     // 检查文件是否存在
     isFileExist(arg) {
@@ -40,4 +31,4 @@ var FS = {
     },
 }
 
-module.exports = FS
+export default FS
